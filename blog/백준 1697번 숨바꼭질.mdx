@@ -1,0 +1,35 @@
+---
+title: "백준 1697번 숨바꼭질 "
+date: "2022-05-15"
+---
+알고리즘 자체의 구현보다 인덱스의 범위때문에 애를 먹었던 문제였다.
+웬만하면 조건을 배열로 만들어서 한번에 돌려줘야 범위 지정을 하기 편하다는 것을 배웠다,,
+
+```python
+def print_text():
+    print("Hello Wolrd!!")
+```
+
+```python
+
+from collections import deque
+n, m = map(int,input().split())
+count=[0] * 100001
+
+def bfs(start):
+    que = deque([start])
+    while(que):
+     x = que.popleft()
+     move = [x - 1, x + 1, x * 2]
+     if(x==m):
+        print(count[x])
+        break;
+     for i in range(len(move)):
+        if 0<=move[i]<=100000 and count[move[i]]==0:
+           count[move[i]]=count[x]+1
+           que.append(move[i])
+
+
+bfs(n)
+
+```
