@@ -1,3 +1,4 @@
+
   .titleColor{
     width: 100vw;
     height: 50px;
@@ -23,6 +24,9 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-image: url('../images/profile.jpg');
     margin: 0px 20px 0px 0px;
   }
 

@@ -27,13 +27,15 @@ function Layout({ pageTitle, children }) {
     }
   }
 `);
+
   return (
     <>
     <div className={titleColor} />
     {/* <img className={image} src="assets/img/city2.jpg" alt='' /> */}
     <div className={container}>
       <div className={titleWrap}>
-        <img className={profile} src="assets/img/myImage.jpg" alt='' />
+        <div className={profile}/>
+        {/* <img className={profile} src="assets/img/myImage.jpg" alt='' /> */}
         <div className={textArea}>
           <div className={textName}>
               Seo Jeong Lee
